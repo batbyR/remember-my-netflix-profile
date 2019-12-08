@@ -1,5 +1,5 @@
 {
-  "name": "Remember my netflix profile",
+  "name": "Remember me netflix",
   "options_page": "options.html",
   "background": {
     "page": "background.html"
