@@ -1,5 +1,4 @@
-import '../img/icon-128.png'
-import '../img/icon-34.png'
+import '../img/icon.png'
 
 const FIRST_OF_JANUARY_2021 = 1609459200;
 
