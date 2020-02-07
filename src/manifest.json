@@ -11,7 +11,7 @@
     "icons": {
     "128": "icon.png"
   },
-  "permissions": [ "cookies", "tabs", "*://*.netflix.com/*" ],
+  "permissions": [ "cookies", "*://*.netflix.com/*" ],
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
