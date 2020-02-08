@@ -1,7 +1,7 @@
 {
   "name": "remember-my-netflix-profile",
-  "version": "0.0.2",
-  "description": "An extension to extend netflix profile cookie",
+  "version": "1.0.0",
+  "description": "An extension to remember your netflix profile",
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js"

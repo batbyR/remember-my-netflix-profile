@@ -1,10 +1,10 @@
 # Remember my netflix profile
 
-The goal of this extension is to get rid of this page:
+Say goodbye to this page:
 
 ![Profile page](./src/img/profile-page.png)
 
-The cookie used by Netflix to store the profile is expring 30 minutes after being created. This extension extends the expiration date to first of January 2021. 
+The cookie used by Netflix to store profiles is expiring 30 minutes after being created. When the cookie is about to expired, this extension extends the expiration date for one more year. 
 
 It has been developed thanks to [this repo](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate).
 

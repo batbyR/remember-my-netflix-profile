@@ -1,13 +1,14 @@
 import '../img/icon.png'
 
-const FIRST_OF_JANUARY_2021 = 1609459200;
+const NUMBER_OF_SECONDS_IN_ONE_HOUR = 3600;
+const NUMBER_OF_SECONDS_IN_ONE_YEAR = 31536000;
 
 const isNetflixProfileCookie = (cookie) => cookie.name === "profilesNewSession";
 
-const extendCookie = ({name, domain, value}) =>
-({url: "https://www.netflix.com", expirationDate: FIRST_OF_JANUARY_2021, name, domain, value})
+const extendCookie = ({expirationDate, name, domain, value}) =>
+({url: "https://www.netflix.com", expirationDate: expirationDate + NUMBER_OF_SECONDS_IN_ONE_YEAR, name, domain, value})
 
 chrome.cookies.onChanged.addListener(({cookie}) => {
-    if(isNetflixProfileCookie(cookie) && cookie.expirationDate !== FIRST_OF_JANUARY_2021) {
-        const extendedCookie = extendCookie(cookie);
+    if(isNetflixProfileCookie(cookie) && cookie.expirationDate - Date.now() / 1000 < NUMBER_OF_SECONDS_IN_ONE_HOUR) {
+        let extendedCookie = extendCookie(cookie);
         chrome.cookies.set(extendedCookie, cookie => console.log('Cookie updated', cookie));}});
